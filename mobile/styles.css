@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+div {
+    font-family: Arial, sans-serif;
+    line-height: 23px;
+}
+
+.header {
+    background-color: lightblue;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex: 0 1 10%;
+    padding: 0 20px;
+}
+
+.footer {
+    background-color: lightblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    flex: 0 1 10%;
+}
+
+.container {
+    display: flex;
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar-left, .sidebar-right {
+    background-color: lightcoral;
+    flex: 0 1 15%;
+    min-width: 150px;
+    padding: 10px;
+}
+
+.links {
+    padding-left: 10px;
+}
+
+.sidebar-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.main {
+    background-color: white;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.menu {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.top-middle {
+    background-color: lightgreen;
+    flex: 0 1 auto;
+    padding: 10px;
+}
+
+.main-content {
+    background-color: white;
+    height: 100%;
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.bottom-right {
+    background-color: lightgreen;
+    flex: 0 1 auto;
+    padding: 10px;
+}
+
+.x, .y {
+    background-color: white;
+    max-width: max-content;
+    padding: 5px;
+    flex: 1;
+}
+
+.angels {
+    align-self: center;
+    background-color: antiquewhite;
+    padding: 2px;
+    width: max(80%, 100px);
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar-left, .sidebar-right {
+        flex: 0 1 auto;
+        min-width: 100%;
+        text-align: center;
+    }
+
+    li{
+        margin-left: 5px;
+    }
+
+    .sidebar-left, .sidebar-right, .main, .main-content, .bottom-right {
+        padding: 5px;
+    }
+
+    .top-middle {
+        padding: 3px;
+    }
+
+    .header, .footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header {
+        padding: 5px 0;
+    }
+
+    .footer {
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    .x, .y {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image img {
+        width: 100%;
+    }
+}

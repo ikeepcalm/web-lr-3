@@ -88,14 +88,23 @@ div {
     height: 100%;
     flex: 1;
     padding: 10px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .bottom-right {
     background-color: lightgreen;
+    height: 20%;
     flex: 0 1 auto;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
     padding: 5px;
+}
+
+.top-right{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
 }
 
 .x, .y {
